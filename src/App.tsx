@@ -7,6 +7,11 @@ import ServicesPage from './pages/ServicesPage';
 import ContactPage from './pages/ContactPage';
 import ServiceDetailPage from './pages/ServiceDetailPage';
 import FaqPage from './pages/FaqPage';
+import Profile from './pages/Profile';
+import MyCourses from './pages/MyCourses';
+import Login from './pages/Login';
+import Logout from './pages/Logout';
+
 
 function App() {
   return (
@@ -19,6 +24,10 @@ function App() {
           <Route path="/services/:id" element={<ServiceDetailPage />} />
           <Route path="/faq" element={<FaqPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/my-courses" element={<MyCourses />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/logout" element={<Logout />} />
         </Routes>
       </Layout>
     </div>
