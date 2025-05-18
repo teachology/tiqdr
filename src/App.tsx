@@ -12,7 +12,6 @@ import ContactPage from './pages/ContactPage';
 import ServiceDetailPage from './pages/ServiceDetailPage';
 import FaqPage from './pages/FaqPage';
 import Profile from './pages/Profile';
-import Login from './pages/Login';
 import Register from './pages/Register';
 import Logout from './pages/Logout';
 
