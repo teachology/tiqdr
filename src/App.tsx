@@ -13,6 +13,7 @@ import ServiceDetailPage from './pages/ServiceDetailPage';
 import FaqPage from './pages/FaqPage';
 import Profile from './pages/Profile';
 import Register from './pages/Register';
+import Login from './pages/Login';
 import Logout from './pages/Logout';
 
 
