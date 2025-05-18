@@ -52,6 +52,13 @@ const AuthButton: React.FC<{ isLoggedIn?: boolean; userName?: string }> = ({
                 <span>ملفي الشخصي</span>
               </button>
               <button
+                onClick={() => closeAndRedirect('/courses')}
+                className="flex w-full items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+              >
+                <Calendar className="w-4 h-4 ml-2" />
+                <span>الدورات</span>
+              </button>
+              <button
                 onClick={() => closeAndRedirect('/my-courses')}
                 className="flex w-full items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
               >

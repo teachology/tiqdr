@@ -51,6 +51,7 @@ const Header: React.FC = () => {
 
   const userMenuItems = [
     { label: 'ملفي الشخصي', path: '/profile' },
+    { label: 'الدورات', path: '/courses' },
     { label: 'دوراتي', path: '/my-courses' },
     { label: 'تسجيل خروج', path: '/logout' },
   ];

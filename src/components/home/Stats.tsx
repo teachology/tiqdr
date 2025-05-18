@@ -33,7 +33,7 @@ const Stats: React.FC = () => {
     {
       icon: <Users size={28} />,
       count: "+2500",
-      label: "عميل سعيد"
+      label: "طالب سعيد"
     },
     {
       icon: <Briefcase size={28} />,
