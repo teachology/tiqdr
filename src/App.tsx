@@ -13,7 +13,6 @@ import ServiceDetailPage from './pages/ServiceDetailPage';
 import FaqPage from './pages/FaqPage';
 import Profile from './pages/Profile';
 import Register from './pages/Register';
-import Login from './pages/Login';
 import Logout from './pages/Logout';
 
 
@@ -32,7 +31,6 @@ function App() {
             <Route path="/courses/:courseId" element={<CourseDetails />} />
             <Route path="/courses" element={<AllCourses />} />
             <Route path="/my-courses" element={<MyCourses />} />
-            <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/logout" element={<Logout />} />
           </Routes>
