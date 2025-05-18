@@ -50,19 +50,19 @@ const Courses: React.FC = () => {
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold mb-4">دورات المعاصر 2025</h2>
             <p className="text-lg text-purple-100">
-              إشراف د. عماد الجريري
+              إشراف أ. أشرف شعبان
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
-              <h3 className="text-xl font-bold mb-4">المواد المتوفرة</h3>
+              <h3 className="text-center text-xl font-bold mb-4">المواد المتوفرة</h3>
               <div className="space-y-4">
                 {courses.map((course, index) => (
                   <div key={index} className="flex justify-between items-center">
                     <span className="text-lg">{course.subject}</span>
                     <span className="bg-white/20 px-3 py-1 rounded-full">
-                      {course.lessons} درس
+                      {course.lessons} ر.س
                     </span>
                   </div>
                 ))}

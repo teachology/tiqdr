@@ -58,7 +58,7 @@ const Hero: React.FC = () => {
               <div className="flex items-center">
                 <div className="mr-4">
                   <p className="font-bold text-2xl text-primary-500">+2500</p>
-                  <p className="text-gray-600">عميل سعيد</p>
+                  <p className="text-gray-600">طالب سعيد</p>
                 </div>
               </div>
             </div>
