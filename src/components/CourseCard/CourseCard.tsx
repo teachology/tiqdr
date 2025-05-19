@@ -1,4 +1,5 @@
 import React from 'react';
+import { useCart } from '../../context/CartContext';
 
 interface CourseCardProps {
   title: string;
@@ -9,6 +10,8 @@ interface CourseCardProps {
   duration: string;
   certificateIncluded: boolean;
   videoPreviewUrl?: string;
+  price: number;
+  id: string;
 }
 
 const CourseCard: React.FC<CourseCardProps> = ({
@@ -19,8 +22,20 @@ const CourseCard: React.FC<CourseCardProps> = ({
   category,
   duration,
   certificateIncluded,
-  videoPreviewUrl
+  videoPreviewUrl,
+  price,
+  id
 }) => {
+  const { cartItems, addToCart } = useCart();
+
+  const isInCart = cartItems.some((item) => item.id === id);
+
+  const handleAddToCart = () => {
+    if (!isInCart) {
+      addToCart({ id, title, price });
+    }
+  };
+
   return (
     <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
       <img src={image} alt={title} className="w-full h-48 object-cover" />
@@ -45,8 +60,13 @@ const CourseCard: React.FC<CourseCardProps> = ({
             />
           </div>
         )}
-        <button className="mt-4 w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700">
-          {buttonText}
+        <button
+          onClick={handleAddToCart}
+          disabled={isInCart}
+          className={`mt-4 w-full py-2 rounded-xl transition 
+            ${isInCart ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700 text-white'}`}
+        >
+          {isInCart ? 'تمت الإضافة' : buttonText}
         </button>
       </div>
     </div>

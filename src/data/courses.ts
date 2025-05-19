@@ -16,7 +16,7 @@ export const courses: Course[] = [
   {
     id: 'tasis',
     title: 'دورة كمي تأسيس 2025',
-    image: '/images/tasis.webp',
+    image: '/images/tasis.jpeg',
     details: ['شرح كامل لجميع الأساسيات', 'تسجيلات متاحة 24/7', 'واجبات مباشرة بعد كل درس'],
     price: 125,
     isRecorded: true,
@@ -29,7 +29,7 @@ export const courses: Course[] = [
   {
     id: 'mohawsib',
     title: 'دورة كمي محوسب 2025',
-    image: '/images/mohawsib.jpg',
+    image: '/images/mohawsib.jpeg',
     details: ['اختبارات دورية لتقييم المستوى', 'تسجيلات متاحة بعد كل بث مباشر'],
     price: 50,
     isRecorded: true,
@@ -42,7 +42,7 @@ export const courses: Course[] = [
   {
     id: 'recorded',
     title: 'الدورات المسجلة - بنوك التأسيس',
-    image: '/images/recorded.jpg',
+    image: '/images/recorded.jpeg',
     details: ['فيديوهات شاملة لأساسيات الكمي', 'تدريب على التجميعات', 'اختبارات تفاعلية'],
     price: 75,
     isRecorded: true,
@@ -55,7 +55,7 @@ export const courses: Course[] = [
   {
     id: 'live',
     title: 'دورات البث المباشر - 2025',
-    image: '/images/live.jpg',
+    image: '/images/live.jpeg',
     details: ['بث مباشر أسبوعي', 'واجبات يومية', 'شرح شامل للتجميعات والكتب'],
     price: 200,
     isRecorded: false,

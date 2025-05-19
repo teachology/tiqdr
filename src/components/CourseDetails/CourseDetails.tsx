@@ -2,10 +2,11 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { ShoppingCart } from 'lucide-react';
 import { courses as courseList } from '../../data/courses';
+import { useCart } from '../../context/CartContext'; // ✅ Import useCart
 
 const CourseDetails: React.FC = () => {
   const { courseId } = useParams();
-  const [cart, setCart] = React.useState<number>(0);
+  const { cartTotal, addToCart } = useCart(); // ✅ Use global cart context
 
   const course = courseList.find((c) => c.id === courseId);
 
@@ -19,7 +20,7 @@ const CourseDetails: React.FC = () => {
       <div className="fixed top-20 left-4 z-50">
         <button className="bg-purple-800 text-white px-4 py-2 rounded-full flex items-center gap-2">
           <ShoppingCart className="w-5 h-5" />
-          <span>{cart.toFixed(2)} ريال</span>
+          <span>{cartTotal.toFixed(2)} ريال</span> {/* ✅ Show global cart total */}
         </button>
       </div>
 
@@ -46,7 +47,7 @@ const CourseDetails: React.FC = () => {
         <div className="flex justify-between items-center mb-4">
           <button
             className="bg-purple-800 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-colors"
-            onClick={() => setCart((prev) => prev + course.price)}
+            onClick={() => addToCart(course)} // ✅ Use context to add course
           >
             إضافة للسلة
           </button>
@@ -57,17 +58,17 @@ const CourseDetails: React.FC = () => {
       </div>
 
       {/* Course Features */}
-      <div className="bg-white rounded-lg shadow p-6">
+      <div className="bg-white rounded-lg shadow p-6" dir="rtl">
         <h2 className="text-xl font-bold text-right mb-4">مميزات الدورة</h2>
         <ul className="space-y-3 text-right">
           {course.details.map((feature, index) => (
-            <li key={index} className="flex items-center justify-end gap-2">
+            <li key={index} className="flex flex-row-reverse items-center justify-end gap-2">
               <span>{feature}</span>
               <span className="w-2 h-2 bg-purple-800 rounded-full"></span>
             </li>
           ))}
           {course.isRecorded && (
-            <li className="flex items-center justify-end gap-2">
+            <li className="flex flex-row-reverse items-center justify-end gap-2">
               <span>تسجيلات الدورة متاحة لمدة سنة</span>
               <span className="w-2 h-2 bg-purple-800 rounded-full"></span>
             </li>
